@@ -16,12 +16,12 @@
   overflow: hidden;
   box-sizing: border-box;
 }
-.marquee .animation {
+/* .marquee .animation {
   display: inline-block;
   padding-left: 100%;
   -webkit-animation: marquee 20s linear infinite;
   animation: marquee 30s linear infinite;
-}
+} */
 @-webkit-keyframes marquee {
   0% {
     -webkit-transform: translate(0, 0);
@@ -43,12 +43,12 @@
   }
 }
 
-.animation span {
+/* .animation span {
   font-size: 35px;
   font-weight: bold;
   margin-right: 15px;
   margin-left: 15px;
-}
+} */
 
 .marquee img {
   width: 1000px; /* Set the width of the images */
@@ -56,6 +56,33 @@
 }
 
 /*Section 2*/
+.overlay-button {
+  position: absolute;
+  top: 50%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 80px;
+  opacity: 0.8;
+}
+.overlay-button-next {
+  position: absolute;
+  top: 50%;
+  left: 84%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 80px;
+  opacity: 0.8;
+}
+
 .search-container {
   display: flex;
   align-items: center;
@@ -166,7 +193,7 @@ h3 {
 }
 
 .card_1:hover {
-  transform: translateY(-5px);
+  transform: scale(1.1) rotate(2.5deg); 
 }
 
 .card_1-image {
@@ -219,14 +246,13 @@ h3 {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 0 10px 20px;
   transition: transform 0.3s ease;
   width: 360px;
 }
 
 .card_2 img {
   display: flex;
-  width: 100%;
+  width: 350px;
   height: 420px;
   justify-content: space-evenly;
 }
@@ -352,4 +378,86 @@ p {
 .btn:hover ~ .btn{
 
 pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* Add CSS rules for screens up to 768px wide */
+  .container_1 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card_1 {
+    width: 45%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Add CSS rules for screens up to 576px wide */
+  .container_1 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card_1 {
+    width: 90%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* Add CSS rules for screens up to 992px wide */
+  .container_2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card_2 {
+    width: 45%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Add CSS rules for screens up to 768px wide */
+  .container_2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card_2 {
+    width: 90%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Add CSS rules for screens up to 576px wide */
+  .container_2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card_2 {
+    width: 90%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* Add CSS rules for screens up to 992px wide */
+  .container_3 {
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Add CSS rules for screens up to 576px wide */
+  .container_3 {
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+    padding: 0 20px;
+  }
 }

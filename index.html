@@ -36,31 +36,17 @@
     <div class="container-fluid">
       <div class="marquee">
         <div class="animation">
+          <img src="images/svg/banner-prv.png" style="width: 100px;" onclick="prevImg()"/>
           <span>
-            <img src="images\image 1.jpg" alt="Image 1" />
+            <img src="./images/banner/banner.png" alt="Image 1" />
           </span>
-
-          <span>
-            <img src="images\image 1.jpg" alt="Image 1" />
-          </span>
-
-          <span>
-            <img src="images\image 1.jpg" alt="Image 1" />
-          </span>
-
-          <span>
-            <img src="images\image 1.jpg" alt="Image 1" />
-          </span>
-
-          <span>
-            <img src="images\image 1.jpg" alt="Image 1" />
-          </span>
+          <img src="images/svg/banner-next.png" style="width: 100px;" onclick="nextImg()"/>
         </div>
       </div>
     </div>
     <!----Section 2--->
     <div class="section_2">
-      <img src="./images/image 2.jpg" class="mt-4" id="img2"/>
+      <img src="./images/common/leaf.png" class="mt-4" id="img2"/>
       <h3>Begin my journey</h3>
       <div class="search-container mt-0 mb-0">
         <input type="text" placeholder="Search...">
@@ -70,37 +56,36 @@
     </div>
     <div class="container">
       <div class="card">
+        <img src="images/svg/banner-prv.png" onclick="" class="overlay-button"/>
         <img
-          src="./images/gujarati_bride.jpg"
+          src="./images/journey/Nupur_Padhye _ Gaurvi_Desai.png"
           alt="Gujarati Bride"
           class="card-image"
         />
         <div class="card-content">
-          <h2>Gujarati Bride</h2><br>
           <button class="btn btn-outline-danger">Trending in Guj</button>
           <button type="button" class="btn btn-danger">View</button>
         </div>
       </div>
       <div class="card">
         <img
-          src="./images/tamil_bride.jpg"
+          src="./images/journey/Nupur_Padhye _ Gaurvi_Desai.png"
           alt="Tamil Bride"
           class="card-image"
         />
         <div class="card-content">
-          <h2>Tamil Bride</h2><br>
           <button class="btn btn-outline-danger">Trending in Tamil</button>
           <button type="button" class="btn btn-danger">View</button>
         </div>
       </div>
        <div class="card">
         <img
-          src="./images/punjabi_bride.jpg"
+        src="./images/journey/Nupur_Padhye _ Gaurvi_Desai.png"
           alt="Punjabi Bride"
           class="card-image"
         />
+        <img src="images/svg/banner-next.png" onclick="" class="overlay-button-next"/>
         <div class="card-content">
-          <h2>Punjabi Bride</h2><br>
           <button class="btn btn-outline-danger">Trending in Punj</button>
           <button type="button" class="btn btn-danger">View</button>
         </div>
@@ -108,39 +93,40 @@
     </div>
     <!----Section 3----->
     <div class="section_3">
-    <img src="./images/image 2.jpg" class="mt-5 mb-0" id="img2"/>
+
+    <img src="./images/common/leaf.png" class="mt-5 mb-0" id="img2"/>
       <h3 class="title">Choose my jewellery</h3>
     <div class="container_1">
         <div class="card_1">
-          <img src="./images/necklace.jpg" alt="Necklace Set" class="card_1-image">
+          <img src="./images/cards/1.png" alt="Necklace Set" class="card_1-image">
         </div>
         <div class="card_1">
-          <img src="./images/bangles.jpg" alt="Bangles" class="card_1-image">
+          <img src="./images/cards/2.png" alt="Bangles" class="card_1-image">
         </div>
         <div class="card_1">
-          <img src="./images/mangalsutra.jpg" alt="Mangalsutra" class="card_1-image">
+          <img src="./images/cards/3.png" alt="Mangalsutra" class="card_1-image">
         </div>
         <div class="card_1">
-          <img src="./images/harams.jpg" alt="Harams" class="card_1-image">
+          <img src="./images/cards/4.png" alt="Harams" class="card_1-image">
         </div>
         <div class="card_1">
-          <img src="./images/all.jpg" alt="All Jewellery" class="card_1-image">
+          <img src="./images/cards/5.png" alt="All Jewellery" class="card_1-image">
         </div>
       </div>
     </div>
     <!--Section 4-->
     <div class="section_4">
-        <img src="./images/image 2.jpg" class="mt-5 mb-0" id="img2"/>
+        <img src="./images/common/leaf.png" class="mt-5 mb-0" id="img2"/>
         <h3 class="title">Featuring Collections</h3>
     <div class="container_2">
            <div class="card_2">
-          <img src="./images/left.jpg" alt="Collection 1" >
+          <img src="./images/Featuring_Collections/2.png" alt="Collection 1" >
         </div>
         <div class="card_2">
-            <img src="./images/right.jpg" alt="Collection 1">
+            <img src="./images/Featuring_Collections/1.png" alt="Collection 1">
           </div>
           <div class="card_2">
-            <img src="./images/last.jpg" alt="Collection 1">
+            <img src="./images/Featuring_Collections/dance_video.png" alt="Collection 1">
           </div>
       </div>
       <!--Section 5-->
@@ -185,5 +171,19 @@
             </div>
         </div>
     </div>
-  </body>
-</html>
+    <script>
+      const images = ["banner.png"];
+      let currentIndex = 0;
+      const sliderImage = document.getElementById('sliderImage');
+
+      function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      sliderImage.src = images[currentIndex];
+    }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        sliderImage.src = images[currentIndex];
+    }
+</script>
+ 
